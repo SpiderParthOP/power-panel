@@ -7,7 +7,7 @@ sudo apt install -y docker.io docker-compose nodejs npm git
 
 # Clone panel if not already cloned
 if [ ! -d "power-panel" ]; then
-  git clone https://github.com/YOUR_USERNAME/power-panel.git
+  git clone https://github.com/SpiderParthOP/power-panel.git
   cd power-panel
 else
   echo "⚠️ Folder 'power-panel' already exists. Skipping clone."
