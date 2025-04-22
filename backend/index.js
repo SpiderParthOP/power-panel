@@ -1,11 +1,13 @@
-const express = require('express');
+const express = require("express");
+const cors = require("cors");
 const app = express();
 const port = 5000;
 
-app.get('/', (req, res) => {
-  res.send('Power Panel Backend Running ✅');
-});
+app.use(cors());
+app.use(express.json());
+
+app.use("/api/auth", require("./routes/auth"));
 
 app.listen(port, () => {
-  console.log(`Backend live at http://localhost:${port}`);
+    console.log(`⚡ Power Panel backend running on http://localhost:${port}`);
 });
